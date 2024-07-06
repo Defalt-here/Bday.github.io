@@ -5,26 +5,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Super Secret</title>
+    <title> Dev log for patch V21</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+    <div class="pre">
+        <pre>
+
+  __ __   ____  ____  ____  __ __      ____   ____  ____  ______  __ __  ___     ____  __ __ 
+ |  |  | /    ||    \|    \|  |  |    |    \ |    ||    \|      ||  |  ||   \   /    ||  |  |
+ |  |  ||  o  ||  o  )  o  )  |  |    |  o  ) |  | |  D  )      ||  |  ||    \ |  o  ||  |  |
+ |  _  ||     ||   _/|   _/|  ~  |    |     | |  | |    /|_|  |_||  _  ||  D  ||     ||  ~  |
+ |  |  ||  _  ||  |  |  |  |___, |    |  O  | |  | |    \  |  |  |  |  ||     ||  _  ||___, |
+ |  |  ||  |  ||  |  |  |  |     |    |     | |  | |  .  \ |  |  |  |  ||     ||  |  ||     |
+ |__|__||__|__||__|  |__|  |____/     |_____||____||__|\_| |__|  |__|__||_____||__|__||____/ 
+                                                                                             
+ 
+    </pre>
+    </div>
     <div class="name">
         <p>
-            Hello <input type="text" , placeholder="enter name" /> it looks like it
-
+            /> Hello $user Rim$ it looks like it's the day of your release you are now at patch V.21.0
         </p>
     </div>
     <div class="pass">
         <p>
-            Verify yourself
-            <input type="text" , id="pass" , placeholder="enter password" />
+            /> Verify admin to gain dev log access<br>
         </p>
     </div>
-    <div class="button">
-        <button onclick="getPass()">Submit</button>
-    </div>
+    <div class="pass"><label>/> </label><input type="text" , id="pass" , placeholder="|" />
+        <p>© Aditya Ranjan</p></div>
+    <pre class = "art">
+                                       /~\
+                                      |oo )      Why don't you die?
+                                      _\=/_       
+                      ___            /  _  \
+                     / ()\          //|/.\|\\
+                   _|_____|_       ||  \_/  ||
+                  | | === | |      || |\ /| ||
+                  |_|  O  |_|       # \_ _/ #
+                   ||  O  ||          | | |
+                   ||__*__||          | | |
+                  |~ \___/ ~|         []|[]
+                  /=\ /=\ /=\         | | |
+\_________________[_]_[_]_[_]________/_]_[_\______________________/
+    </pre>
 </body>
 
 </html>
@@ -36,38 +62,57 @@
         margin: 17px;
         overflow: hidden;
     }
+    .art{
+        margin-top: 18vh;
+        margin-left: 32vw;
+        animation: preAnim 0.1s;
+        transition: none;
+    }
+    .pre {
+        opacity: 100%;
+        animation: preAnim 0.1s, steps(2,end)forwards;
+    }
+
+    @keyframes preAnim {
+        from {
+            opacity: 0%;
+        }
+
+        to {
+            opacity: 100%;
+        }
+    }
 
     .name {
-        margin: 10px;
-        height: 6vh;
+        height: 2vh;
         width: 84%;
-        font-size: 5vh;
+        font-size: 2vh;
         display: inline-block;
         white-space: nowrap;
     }
 
     .pass {
-        margin: 10px;
-        height: 6vh;
+        height: 2vh;
         width: 50%;
-        font-size: 5vh;
+        font-size: 2vh;
         display: inline-block;
         white-space: nowrap;
     }
 
     input[type="text"] {
         background-color: black;
-        border-top: 1px;
-        border-right: 1px;
-        border-left: 1px;
+        border: none;
         border-color: #00ff00;
         color: #00ff00;
         font-family: "Courier New", Courier, monospace;
-        font-size: 5vh;
+        font-size: 2vh;
+        animation: typing 1s steps(2, end) forwards;
+        animation-delay: 0.5s;
     }
 
     input:focus {
         outline: none;
+        background-color: transparent;
     }
 
     ::placeholder {
@@ -77,8 +122,8 @@
     }
 
     p {
-        height: 0%;
-        animation: typing 1s steps(5, end) forwards;
+        width: 0%;
+        animation: typing 1s steps(24, end) forwards;
         animation-delay: 0.5s;
         overflow: hidden;
     }
@@ -94,7 +139,7 @@
     button {
         height: 0%;
         font-size: large;
-        animation: typing 1s steps(5, end) forwards;
+        animation: typing 1s steps(2, end) forwards;
         animation-delay: 0.5s;
         overflow: hidden;
         width: 31%;
@@ -118,11 +163,11 @@
 
     @keyframes typing {
         from {
-            height: 0;
+            width: 0;
         }
 
         to {
-            height: 100%;
+            width: 100%;
         }
     }
 
@@ -137,10 +182,17 @@
     }
 </style>
 <script>
-    function getPass() {
-        var password = document.getElementById("pass").value;
-        if (password == "123") {
+    // function getPass() {
+    //     var password = document.getElementById("pass").value;
+    //     if (password == "123") {
+
+    //     }
+    // }
+    var password = document.getElementById("pass");
+    var loadText = document.getElementById("loadtext");
+    password.addEventListener("keyup", function (event) {
+        if (event.key === "Enter" && password.value == "tghtr4evr") {
             window.location.href = "inside.html";
         }
-    }
+    });
 </script>
