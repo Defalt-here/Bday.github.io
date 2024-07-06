@@ -1,1 +1,146 @@
-Hello
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Super Secret</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="name">
+        <p>
+            Hello <input type="text" , placeholder="enter name" /> it looks like it
+
+        </p>
+    </div>
+    <div class="pass">
+        <p>
+            Verify yourself
+            <input type="text" , id="pass" , placeholder="enter password" />
+        </p>
+    </div>
+    <div class="button">
+        <button onclick="getPass()">Submit</button>
+    </div>
+</body>
+
+</html>
+<style>
+    body {
+        background-color: rgb(0, 0, 0);
+        font-family: "Courier New", Courier, monospace;
+        color: rgb(0, 255, 0);
+        margin: 17px;
+        overflow: hidden;
+    }
+
+    .name {
+        margin: 10px;
+        height: 6vh;
+        width: 84%;
+        font-size: 5vh;
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    .pass {
+        margin: 10px;
+        height: 6vh;
+        width: 50%;
+        font-size: 5vh;
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    input[type="text"] {
+        background-color: black;
+        border-top: 1px;
+        border-right: 1px;
+        border-left: 1px;
+        border-color: #00ff00;
+        color: #00ff00;
+        font-family: "Courier New", Courier, monospace;
+        font-size: 5vh;
+    }
+
+    input:focus {
+        outline: none;
+    }
+
+    ::placeholder {
+        color: rgb(0, 255, 0);
+        opacity: 1;
+        /* Firefox */
+    }
+
+    p {
+        height: 0%;
+        animation: typing 1s steps(5, end) forwards;
+        animation-delay: 0.5s;
+        overflow: hidden;
+    }
+
+    .button {
+        margin: 10px;
+        height: 10vh;
+        width: 84%;
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    button {
+        height: 0%;
+        font-size: large;
+        animation: typing 1s steps(5, end) forwards;
+        animation-delay: 0.5s;
+        overflow: hidden;
+        width: 31%;
+        background-color: transparent;
+        border-width: 1px;
+        border-color: #00ff00;
+        color: #00ff00;
+        font-size: 8vh;
+        font-family: "Courier New", Courier, monospace;
+        transition: ease-in 0.2s;
+    }
+
+    button:active {
+        border-color: #00ff00;
+    }
+
+    button:hover {
+        cursor: pointer;
+        background-color: hsl(99, 62%, 84%);
+    }
+
+    @keyframes typing {
+        from {
+            height: 0;
+        }
+
+        to {
+            height: 100%;
+        }
+    }
+
+    @keyframes blink {
+        from {
+            border-color: transparent;
+        }
+
+        to {
+            border-color: #00ff00;
+        }
+    }
+</style>
+<script>
+    function getPass() {
+        var password = document.getElementById("pass").value;
+        if (password == "123") {
+            window.location.href = "inside.html";
+        }
+    }
+</script>
