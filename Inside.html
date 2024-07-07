@@ -5,26 +5,108 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Super Secret</title>
+    <link rel="icon" type="image/x-icon" href="Favicon.ico">
+    <title>Dev Logs V.21</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div class="name">
-        <p>
-            Hello <input type="text" , placeholder="enter name" /> it looks like it
+    <div class="pref">
+<pre>
+     _____  __ __    __  __  _      __ __   ___   __ __ 
+    |     ||  |  |  /  ]|  |/ ]    |  |  | /   \ |  |  |
+    |   __||  |  | /  / |  ' /     |  |  ||     ||  |  |
+    |  |_  |  |  |/  /  |    \     |  ~  ||  O  ||  |  |
+    |   _] |  :  /   \_ |     |    |___, ||     ||  :  |
+    |  |   |     \     ||  .  |    |     ||     ||     |
+    |__|    \__,_|\____||__|\_|    |____/  \___/  \__,_|
+                 you can use your mouse  
+</pre>
 
-        </p>
     </div>
-    <div class="pass">
-        <p>
-            Verify yourself
-            <input type="text" , id="pass" , placeholder="enter password" />
-        </p>
+    <div class="option1">
+        <p><a href ="para.html">/> Paragraph</a></p>
     </div>
-    <div class="button">
-        <button onclick="getPass()">Submit</button>
+    <div class="option2">
+        <p><a href ="https://www.youtube.com/watch?v=PZwrpTdTSDo" target = "_blank">/> Song4u</a></p>
     </div>
+    <div class="option3">
+        <p><a href ="index.html">/> Something</a></p>
+    </div>
+    <div class="option3">
+        <p><a href ="index.html">/> Go back</a></p>
+    </div>
+<div class="art">
+    <pre>
+             _
+           |/ \|
+           |\_/|
+           |---|
+           |   |
+           |   |
+         _ |=-=| _
+     _  / \|   |/ \
+    / \|   |   |   ||\
+    |   |   |   |   | \>
+    |   |   |   |   |   \
+    | -   -   -   - |)   )
+    |                   /
+    \                 /
+    \               /
+    \             /
+    \           /
+    
+    </pre>
+</div>
 </body>
+<style>
+    body {
+        background-color: rgb(0, 0, 0);
+        font-family: "Courier New", Courier, monospace;
+        color: rgb(0, 255, 0);
+        margin: 17px;
+        overflow: hidden;
+    }
+    a{
+        color: rgb(0, 255, 0);
+        text-decoration: none;
+    }
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 100%;
+        }
+    }
+
+    .option1,
+    .option2,
+    .option3,
+    .pref {
+        height: 2vh;
+        width: 84%;
+        font-size: 2vh;
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    p,
+    pre {
+        width: 0%;
+        animation: typing 2s steps(24, end) forwards;
+        animation-delay: 0.5s;
+        overflow: hidden;
+    }
+    .art{
+        margin-left: 69vw;
+        margin-top: -30vh;
+    }
+    a:hover{
+        cursor: pointer;
+        color: rgb(255, 255, 255);
+    }
+</style>
 
 </html>

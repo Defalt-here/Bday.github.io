@@ -5,11 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title> Dev log for patch V21</title>
+    <link rel="icon" type="image/x-icon" href="Favicon.ico">
+    <title> Dev log authentication</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+    <div class="content">
     <div class="pre">
         <pre>
 
@@ -26,7 +28,7 @@
     </div>
     <div class="name">
         <p>
-            /> Hello $user Rim$ it looks like it's the day of your release you are now at patch V.21.0
+            /> Hello $user Rim$ it looks like it's the day of your release; you are now at patch V.21.0
         </p>
     </div>
     <div class="pass">
@@ -34,8 +36,10 @@
             /> Verify admin to gain dev log access<br>
         </p>
     </div>
-    <div class="pass"><label>/> </label><input type="text" , id="pass" , placeholder="|" />
-        <p>© Aditya Ranjan</p></div>
+    <div class="pass"><label>/> </label><input type="text" , id="pass" , placeholder="Enter Password" />
+        <p id = "message"></p>
+        <p>© Aditya Ranjan 2024</p>
+    </div>
     <pre class = "art">
                                        /~\
                                       |oo )      Why don't you die?
@@ -51,6 +55,7 @@
                   /=\ /=\ /=\         | | |
 \_________________[_]_[_]_[_]________/_]_[_\______________________/
     </pre>
+</div>
 </body>
 
 </html>
@@ -123,7 +128,7 @@
 
     p {
         width: 0%;
-        animation: typing 1s steps(24, end) forwards;
+        animation: typing 2s steps(20, end) forwards;
         animation-delay: 0.5s;
         overflow: hidden;
     }
@@ -190,9 +195,22 @@
     // }
     var password = document.getElementById("pass");
     var loadText = document.getElementById("loadtext");
+    let messageText = document.getElementById("message").innerHTML;
     password.addEventListener("keyup", function (event) {
         if (event.key === "Enter" && password.value == "tghtr4evr") {
+            document.getElementById("message").innerHTML = "/> Sudo access permitted";
             window.location.href = "inside.html";
+        }else if (event.key === "Enter" && password.value == "drishan") {
+            document.getElementById("message").innerHTML = "/> Easter egg hehe";
+            window.location.href = "Drishan.html";
+        }else if (event.key === "Enter" && password.value == "palak") {
+            document.getElementById("message").innerHTML = "/> Existential crisis";
+            window.location.href = "palak.html";
+        }else if (event.key === "Enter" && password.value == "rishi") {
+            document.getElementById("message").innerHTML = "/> LDR ahh";
+            window.location.href = "rishi.html";
+        } else if(event.key === "Enter" && password.value != "tghtr4evr"){
+            document.getElementById("message").innerHTML = "/> Wrong password";
         }
     });
 </script>
