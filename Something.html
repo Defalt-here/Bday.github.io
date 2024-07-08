@@ -14,8 +14,8 @@
     <div class="mess">
         <p id = "message" align = "center">Show Affection.exe</p>
     </div>
-    <div class="pref">
-        <p id = "button" align = "center" onclick="TextChange()">Keep clicking to see affection</p>
+    <div class="pref" onclick="TextChange()">
+        <p><p id = "button" align = "center" >Keep clicking to see affection</p>
     </div>
 </body>
 <style>
@@ -25,10 +25,6 @@
         color: rgb(0, 255, 0);
         margin: 17px;
         overflow: hidden;
-    }
-    a{
-        color: rgb(0, 255, 0);
-        text-decoration: none;
     }
     .pref{
         margin-top: 0%;
@@ -62,7 +58,8 @@
 </html>
 <script>
     const  actions = ["Pulled hair","Stole hairclip","Stole glasses","Roasted you","Ignored you",
-    "Made you run hands over head","Cried to you","Called you when drunk"];
+    "Made you run hands over my head","Cried to you","Drunk called you","Hugged you","heard you cry",
+    "fought you","Bought maggi, now cook it","Posted video call screenshot on story"];
     var currentAction;
     var max = actions.length - 1;
     function TextChange(){
