@@ -67,6 +67,10 @@
         margin: 17px;
         overflow: hidden;
     }
+    ::selection {
+    color: black;
+    background: #00ff00;
+}
     .art{
         margin-top: 18vh;
         margin-left: 32vw;
@@ -197,7 +201,7 @@
     var loadText = document.getElementById("loadtext");
     let messageText = document.getElementById("message").innerHTML;
     password.addEventListener("keyup", function (event) {
-        if (event.key === "Enter" && password.value == "tghtr4evr") {
+        if (event.key === "Enter" && password.value == "tgthr4evr") {
             document.getElementById("message").innerHTML = "/> Sudo access permitted";
             window.location.href = "Inside.html";
         }else if (event.key === "Enter" && password.value == "drishan") {
@@ -212,7 +216,7 @@
         }else if (event.key === "Enter" && password.value == "ranjan") {
             document.getElementById("message").innerHTML = "/> GOAT";
             window.location.href = "Ranjan.html";
-        } else if(event.key === "Enter" && password.value != "tghtr4evr"){
+        } else if(event.key === "Enter" && password.value != "tgthr4evr"){
             document.getElementById("message").innerHTML = "/> Wrong password, try again idiot.";
         }
     });
