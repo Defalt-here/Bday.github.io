@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/x-icon" href="Favicon.ico">
+    <title>Show Affection.exe</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="mess">
+        <p id = "message" align = "center">Show Affection.exe</p>
+    </div>
+    <div class="pref">
+        <p id = "button" align = "center" onclick="TextChange()">Keep clicking to see affection</p>
+    </div>
+</body>
+<style>
+    body {
+        background-color: rgb(0, 0, 0);
+        font-family: "Courier New", Courier, monospace;
+        color: rgb(0, 255, 0);
+        margin: 17px;
+        overflow: hidden;
+    }
+    a{
+        color: rgb(0, 255, 0);
+        text-decoration: none;
+    }
+    .pref{
+        margin-top: 0%;
+        width: 0%;
+        animation: typing 2s steps(24, end) forwards;
+        animation-delay: 0.5s;
+        overflow: hidden;
+    }
+    .mess{
+        margin-top: 15%;
+        width: 0%;
+        animation: typing 2s steps(24, end) forwards;
+        animation-delay: 0.5s;
+        overflow: hidden;
+    }
+    .pref:hover{
+        color: aliceblue;
+        cursor: pointer;
+    }
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 100%;
+        }
+    }
+</style>
+
+</html>
+<script>
+    const  actions = ["Pulled hair","Stole hairclip","Stole glasses","Roasted you","Ignored you",
+    "Made you run hands over head","Cried to you","Called you when drunk"];
+    var currentAction;
+    var max = actions.length - 1;
+    function TextChange(){
+        currentAction = Math.floor(Math.random() * (max - 0 + 1) ) + 0;
+        document.getElementById("message").innerHTML = actions[currentAction];
+    }
+</script>
