@@ -201,7 +201,7 @@
     var loadText = document.getElementById("loadtext");
     let messageText = document.getElementById("message").innerHTML;
     password.addEventListener("keyup", function (event) {
-        if (event.key === "Enter" && password.value == "tgthr4evr") {
+        if (event.key === "Enter" && password.value == "newpass") {
             document.getElementById("message").innerHTML = "/> Sudo access permitted";
             window.location.href = "Inside.html";
         }else if (event.key === "Enter" && password.value == "drishan") {
@@ -216,8 +216,8 @@
         }else if (event.key === "Enter" && password.value == "ranjan") {
             document.getElementById("message").innerHTML = "/> GOAT";
             window.location.href = "Ranjan.html";
-        } else if(event.key === "Enter" && password.value != "tgthr4evr"){
-            document.getElementById("message").innerHTML = "/> Wrong password, try again idiot.";
+        } else if(event.key === "Enter" && password.value == "tgthr4evr"){
+            document.getElementById("message").innerHTML = "/> Password changed, lol.";
         }
     });
 </script>
